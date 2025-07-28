@@ -23,6 +23,18 @@ ynh_script_progression "Upgrading source files..."
 ynh_setup_source --dest_dir="$install_dir" --full_replace --keep=".config"
 
 #=================================================
+# INSTALL PYTHON DEPENDENCIES
+#=================================================
+ynh_script_progression "Installing Python dependencies..."
+
+pushd $install_dir
+    python3 -m venv $install_dir/venv
+    ynh_hide_warnings $install_dir/venv/bin/pip install --upgrade pip 
+popd
+
+chown -R $app:$app "$install_dir"
+
+#=================================================
 # UPDATE A CONFIG FILE
 #=================================================
 #ynh_script_progression "Updating $app's configuration files..."
