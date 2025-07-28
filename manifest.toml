@@ -13,7 +13,6 @@ maintainers = ["eric_G"]
 
 [upstream]
 license = "MIT"
-website = "https://example.com"
 demo = "https://a.ocv.me/pub/demo/"
 code = "https://github.com/9001/copyparty"
 
