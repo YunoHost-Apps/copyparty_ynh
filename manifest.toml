@@ -7,22 +7,21 @@ name = "Copyparty"
 description.en = "Portable file server with accelerated resumable uploads"
 description.fr = "Serveur de fichiers portable avec téléchargement accéléré et résumable"
 
-version = "1.18.4~ynh1"
+version = "1.18.5~ynh1"
 
 maintainers = ["eric_G"]
 
 [upstream]
 license = "MIT"
-website = "https://example.com"
 demo = "https://a.ocv.me/pub/demo/"
-admindoc = "https://yunohost.org/packaging_apps"
+admindoc = "https://github.com/9001/copyparty?tab=readme-ov-file#complete-examples"
 code = "https://github.com/9001/copyparty"
 
 [integration]
 yunohost = ">= 12.0.9"
 helpers_version = "2.1"
 architectures = "all"
-multi_instance = true
+multi_instance = false
 
 ldap = false
 sso = false
@@ -43,8 +42,6 @@ ram.runtime = "50M"
     type = "user"
 
     [install.password]
-    help.en = "Use the help field to add an information for the admin about this question."
-    help.fr = "Utilisez le champ aide pour ajouter une information à l'intention de l'administrateur à propos de cette question."
     type = "password"
 
 [resources]
@@ -55,8 +52,8 @@ ram.runtime = "50M"
     in_subdir = false
     extract = false
     rename ="copyparty-sfx.py"
-    url = "https://github.com/9001/copyparty/releases/download/v1.18.4/copyparty-sfx.py"
-    sha256 = "ad35f6c909deee2f75bd725a52894b6584a308d29575096f82fd71f8dd94b031"
+    url = "https://github.com/9001/copyparty/releases/download/v1.18.5/copyparty-sfx.py"
+    sha256 = "ac4623c49c334f337eba9a39510f21758a2742234ad5cf927ddb92e8cfd05f0d"
 
     # autoupdate.strategy = "latest_github_tag"
 
