@@ -14,6 +14,7 @@ maintainers = ["eric_G"]
 [upstream]
 license = "MIT"
 demo = "https://a.ocv.me/pub/demo/"
+admindoc = "https://github.com/9001/copyparty?tab=readme-ov-file#complete-examples"
 code = "https://github.com/9001/copyparty"
 
 [integration]
