@@ -15,7 +15,6 @@ maintainers = ["eric_G"]
 license = "MIT"
 website = "https://example.com"
 demo = "https://a.ocv.me/pub/demo/"
-admindoc = "https://yunohost.org/packaging_apps"
 code = "https://github.com/9001/copyparty"
 
 [integration]
