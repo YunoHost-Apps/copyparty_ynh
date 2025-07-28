@@ -27,12 +27,12 @@ ynh_restore "$data_dir"
 #=================================================
 ynh_script_progression "Installing Python dependencies..."
 
-pushd $install_dir
-    python3 -m venv $install_dir/venv
-    ynh_hide_warnings $install_dir/venv/bin/pip install --upgrade pip 
-popd
+#pushd $install_dir
+#    python3 -m venv $install_dir/venv
+#    ynh_hide_warnings $install_dir/venv/bin/pip install --upgrade pip 
+#popd
 
-chown -R $app:$app "$install_dir"
+#chown -R $app:$app "$install_dir"
 
 #=================================================
 # RESTORE SYSTEM CONFIGURATION
@@ -45,8 +45,6 @@ ynh_restore "/etc/systemd/system/$app.service"
 systemctl enable "$app.service" --quiet
 
 yunohost service add "$app" --description="Portable file server" --log="/var/log/$app/$app.log"
-
-ynh_restore "/etc/logrotate.d/$app"
 
 #=================================================
 # RELOAD NGINX AND PHP-FPM OR THE APP SERVICE
