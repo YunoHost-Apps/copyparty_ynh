@@ -1,1 +1,1 @@
-This is a dummy description of this app features
+Turn almost any device into a file server with resumable uploads/downloads using any Web browser.
