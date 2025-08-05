@@ -34,7 +34,10 @@ chown -R $app:$app "$install_dir"
 #=================================================
 ynh_script_progression "Adding $app's configuration files..."
 
-ynh_config_add --template="example.config" --destination="$install_dir/.config"
+mkdir $install_dir/config
+ynh_config_add --template="example.config" --destination="$install_dir/config/main.config"
+echo "# make sure to `chown -R copyparty:copyparty __INSTALL_DIR__/config` after your editions" > "$install_dir/config/main.config"
+chown -R copyparty:copyparty "$install_dir/config"
 
 #=================================================
 # SYSTEM CONFIGURATION

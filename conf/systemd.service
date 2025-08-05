@@ -6,9 +6,9 @@ After=network.target
 Type=simple
 User=__APP__
 Group=__APP__
-Environment=XDG_CONFIG_HOME=__INSTALL_DIR__/.config
+Environment=XDG_CONFIG_HOME=__INSTALL_DIR__/config
 WorkingDirectory=__INSTALL_DIR__/
-ExecStart=__INSTALL_DIR__/venv/bin/python __INSTALL_DIR__/copyparty-sfx.py -e2dsa
+ExecStart=__INSTALL_DIR__/venv/bin/python __INSTALL_DIR__/copyparty-sfx.py -e2dsa -c __INSTALL_DIR__/config/main.config
 
 ### Depending on specificities of your service/app, you may need to tweak these
 ### .. but this should be a good baseline
