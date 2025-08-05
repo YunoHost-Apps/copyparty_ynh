@@ -37,9 +37,10 @@ chown -R $app:$app "$install_dir"
 #=================================================
 # UPDATE A CONFIG FILE
 #=================================================
-#ynh_script_progression "Updating $app's configuration files..."
+ynh_script_progression "Updating $app's configuration files..."
 
-#ynh_config_add --template="example.config" --destination="$install_dir/.config"
+ynh_config_add --template="example.config" --destination="$install_dir/config/main.config"
+chown -R copyparty:copyparty "$install_dir/config"
 
 #=================================================
 # REAPPLY SYSTEM CONFIGURATION
