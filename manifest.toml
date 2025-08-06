@@ -7,7 +7,7 @@ name = "Copyparty"
 description.en = "Portable file server with accelerated resumable uploads"
 description.fr = "Serveur de fichiers portable avec téléchargement accéléré et résumable"
 
-version = "1.18.5~ynh1"
+version = "1.18.5~ynh2"
 
 maintainers = ["eric_G"]
 
