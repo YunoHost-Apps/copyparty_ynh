@@ -41,6 +41,9 @@ ynh_script_progression "Updating $app's configuration files..."
 
 mkdir -p "$install_dir/config"
 ynh_config_add --template="example.config" --destination="$install_dir/config/main.config"
+if [ ! -f "$install_dir/config/user.config" ]; then
+    echo "# make sure to `chown -R $app:$app $install_dir/config` after your editions" > "$install_dir/config/user.config"
+fi
 chown -R "$app:$app" "$install_dir/config"
 
 #=================================================
