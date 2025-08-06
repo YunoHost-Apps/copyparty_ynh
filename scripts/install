@@ -27,14 +27,16 @@ pushd $install_dir
     ynh_hide_warnings $install_dir/venv/bin/pip install --upgrade pip 
 popd
 
-chown -R $app:$app "$install_dir"
+chown -R "$app:$app" "$install_dir"
 
 #=================================================
 # APP INITIAL CONFIGURATION
 #=================================================
 ynh_script_progression "Adding $app's configuration files..."
 
-ynh_config_add --template="example.config" --destination="$install_dir/.config"
+mkdir -p "$install_dir/config"
+ynh_config_add --template="main.config" --destination="$install_dir/config/main.config"
+ynh_config_add --template="user.config" --destination="$install_dir/config/user.config"
 
 #=================================================
 # SYSTEM CONFIGURATION
