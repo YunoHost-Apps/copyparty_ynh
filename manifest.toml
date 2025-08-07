@@ -55,7 +55,8 @@ ram.runtime = "50M"
     url = "https://github.com/9001/copyparty/releases/download/v1.18.10/copyparty-sfx.py"
     sha256 = "d85750e5a0b035d679272f669fcaebf20e35f901d3e6db0473e19e00abe119e8"
 
-    # autoupdate.strategy = "latest_github_tag"
+    autoupdate.strategy = "latest_github_release"
+    autoupdate.asset = "copyparty-sfx.py"
 
     [resources.system_user]
 
