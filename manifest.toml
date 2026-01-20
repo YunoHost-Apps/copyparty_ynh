@@ -34,6 +34,10 @@ ram.runtime = "50M"
     [install.domain]
     type = "domain"
 
+    [install.path]
+    type = "path"
+    default = "/copyparty"
+
     [install.init_main_permission]
     type = "group"
     default = "visitors"
@@ -66,6 +70,7 @@ ram.runtime = "50M"
 
     [resources.permissions]
     main.url = "/"
+    main.auth_header = false
 
     [resources.ports]
     main.default = 3923
