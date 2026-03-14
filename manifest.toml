@@ -7,7 +7,7 @@ name = "Copyparty"
 description.en = "Portable file server with accelerated resumable uploads"
 description.fr = "Serveur de fichiers portable avec téléchargement accéléré et résumable"
 
-version = "1.20.10~ynh1"
+version = "1.20.12~ynh1"
 
 maintainers = ["eric_G"]
 
@@ -56,8 +56,8 @@ ram.runtime = "50M"
     in_subdir = false
     extract = false
     rename ="copyparty-sfx.py"
-    url = "https://github.com/9001/copyparty/releases/download/v1.20.10/copyparty-sfx.py"
-    sha256 = "42338641a58fe700649fe0d81cfff8bdcd7a8f7dcdc9dde8f587a619eb8f96ac"
+    url = "https://github.com/9001/copyparty/releases/download/v1.20.12/copyparty-sfx.py"
+    sha256 = "f91b02116eeff1bda533f376867294fb960b84b407a78cc060510fad51f67ebb"
 
     autoupdate.strategy = "latest_github_release"
     autoupdate.asset = "copyparty-sfx.py"
